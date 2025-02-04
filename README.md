@@ -17,7 +17,8 @@ O método JSON.stringify(data, undefined, 2) melhora a formatação do JSON para
 
 * Para a validação dos checkbox criados dinâmicamente dentro da função buildResult(), foi necessário criar uma nova variável dentro do addEventListener selecionando todos elementos que possuem o ID igual ao elemento do array 'keys' e filtrando cada um deles quando forem selecionados, no final ao utilizar o método '.length' conseguimos perceber quantos elementos foram selecionados. Se o resultado for 0, quer dizer que nenhum foi selecionado, logo é exibido uma mensagem para o usuário selecionar pelo menos um campo do checkbox. Abaixo a linha de código que é responsável por isso: <br>
 ```
-const checkedElements = keys.map((key) => document.getElementById(key))                         .filter((element) => element.checked === true);
+const checkedElements = keys.map((key) => document.getElementById(key))  
+                          .filter((element) => element.checked === true);
 
 if (checkedElements.length === 0) {
     window.alert("Selecione pelo menos um checkbox antes de buscar.");
